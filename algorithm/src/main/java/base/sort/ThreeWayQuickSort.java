@@ -44,6 +44,8 @@ public class ThreeWayQuickSort<T extends Comparable<T>> extends QuickSort<T> {
         sort(nums, gt + 1, end);
     }
 
+
+
     @Test
     public void demo() {
         System.out.println(Arrays.toString(array));

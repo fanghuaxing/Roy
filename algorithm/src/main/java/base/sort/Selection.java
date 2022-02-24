@@ -14,8 +14,6 @@ import java.util.Arrays;
  */
 public class Selection<T extends Comparable<T>> extends Sort<T> {
 
-//    int[] ints = AlgorithmUtil.randomArray(100000, 10000, 0);
-
     @Override
     public void sort(T[] nums) {
         int N = nums.length;

@@ -49,6 +49,23 @@ public class QuickSort<T extends Comparable<T>> extends Sort<T> {
         return j;
     }
 
+    public T select(T[] nums, int k) {
+        int l = 0, h = nums.length - 1;
+        while (h > l) {
+            int j = partition(nums, l, h);
+
+            if (j == k) {
+                return nums[k];
+
+            } else if (j > k) {
+                h = j - 1;
+
+            } else {
+                l = j + 1;
+            }
+        }
+        return nums[k];
+    }
 
     @Test
     public void demo() {

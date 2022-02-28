@@ -29,13 +29,9 @@ public class ThreeWayQuickSort<T extends Comparable<T>> extends QuickSort<T> {
         while (i <= gt) {
             int cmp = nums[i].compareTo(v);
             if (cmp < 0) {
-                System.out.println(lt + "<->" + i);
                 swap(nums, lt++, i++);
-                System.out.println(  Arrays.toString(nums));
             } else if (cmp > 0) {
-                System.out.println(i + "<->" + gt);
                 swap(nums, i, gt--);
-                System.out.println(  Arrays.toString(nums));
             } else {
                 i++;
             }
@@ -48,11 +44,8 @@ public class ThreeWayQuickSort<T extends Comparable<T>> extends QuickSort<T> {
 
     @Test
     public void demo() {
-        System.out.println(Arrays.toString(array));
-        System.out.println("Arrays.toString(array)");
-        Integer[] intArr = Arrays.stream(array).boxed().toArray(Integer[]::new);
-        new ThreeWayQuickSort<Integer>().sort(intArr);
-        System.out.println(Arrays.toString(intArr));
-        System.out.println("Arrays.toString(intArr)");
+        System.out.println(Arrays.toString(intArrays));
+        new ThreeWayQuickSort<Integer>().sort(intArrays);
+        System.out.println(Arrays.toString(intArrays));
     }
 }

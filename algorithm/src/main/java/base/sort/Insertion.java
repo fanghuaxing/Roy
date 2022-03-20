@@ -16,10 +16,8 @@ public class Insertion<T extends Comparable<T>> extends Sort<T> {
     @Override
     public void sort(T[] nums) {
         for (int i = 1; i < nums.length; i++) {
-            for (int j = i; j > 0; j--) {
-                if (less(nums[j], nums[j - 1])) {
-                    swap(nums, j, j - 1);
-                }
+            for (int j = i; j > 0 && less(nums[j], nums[j - 1]); j--) {
+                swap(nums, j, j - 1);
             }
         }
     }
@@ -37,8 +35,8 @@ public class Insertion<T extends Comparable<T>> extends Sort<T> {
 
     @Test
     public void demo() {
-        System.out.println(Arrays.toString(intArrays));
+        System.out.println("begin:" + Arrays.toString(intArrays));
         new Insertion<Integer>().sort(intArrays);
-        System.out.println(Arrays.toString(intArrays));
+        System.out.println("end" + Arrays.toString(intArrays));
     }
 }

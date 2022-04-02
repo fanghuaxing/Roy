@@ -1,4 +1,4 @@
-package sword_offer;
+package sword_offer.to25;
 
 
 // 答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。

@@ -1,4 +1,4 @@
-package sword_offer;
+package sword_offer.to25;
 
 public class Solution_03 {
     //在一个长度为 n 的数组里的所有数字都在 0 到 n-1 的范围内。数组中某些数字是重复的，

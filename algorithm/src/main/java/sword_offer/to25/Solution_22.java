@@ -1,4 +1,4 @@
-package sword_offer;
+package sword_offer.to25;
 
 public class Solution_22 {
 

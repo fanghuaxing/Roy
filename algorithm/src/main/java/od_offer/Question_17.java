@@ -12,7 +12,6 @@ import java.util.*;
  */
 public class Question_17{
     public static void main(String[] args) {
-
 /*
     给定一个字符串
     只包含大写字母
@@ -82,12 +81,7 @@ public class Question_17{
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
             list.add(entry.getKey() + "-" + entry.getValue());
         }
-        list.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o2.split("-")[1].compareTo(o1.split("-")[1]);
-            }
-        });
+        list.sort((o1, o2) -> o2.split("-")[1].compareTo(o1.split("-")[1]));
 
         if (k > list.size()) System.out.println(-1);
         else System.out.println(list.get(k - 1).split("-")[1]);
